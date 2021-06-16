@@ -15,6 +15,8 @@ export function copy(value) {
   return isArray(value) ? [...value] : { ...value };
 }
 
-export function reverseMerge() {}
+export function reverseMerge(array1,array2) {
+return [...array2,...array1]
+}
 
 export function filterAttribs() {}
