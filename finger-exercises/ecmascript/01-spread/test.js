@@ -1,22 +1,22 @@
 import { min, copy, reverseMerge, filterAttribs } from '.';
 
 describe('Spread operator', () => {
-  xit('min returns the param if is the only argument', () => {
+  it('min returns the param if is the only argument', () => {
     expect(min(1)).toBe(1);
     expect(min(2)).toBe(2);
   });
-  xit('min can return the minimum based on a list', () => {
+  it('min can return the minimum based on a list', () => {
     expect(min([1, 2])).toBe(1);
     expect(min([2, 1])).toBe(1);
   });
-  xit('min can return the minimum based on many parameters', () => {
+  it('min can return the minimum based on many parameters', () => {
     expect(min(1, 2, 3, 4, 5, 0)).toBe(0);
     expect(min(1, 2, 3, 4, -1, 0)).toBe(-1);
   });
-  xit('min returns undefined on no args', () => {
+  it('min returns undefined on no args', () => {
     expect(min()).toBe(undefined);
   });
-  xit('copy can copy objects', () => {
+  it('copy can copy objects', () => {
     const example = { a: 1, b: 2 };
     const copiedExample = copy(example);
 
@@ -27,7 +27,7 @@ describe('Spread operator', () => {
     expect(example).toEqual({ a: 1, b: 2, c: 3 });
     expect(copiedExample).toEqual({ a: 1, b: 2 });
   });
-  xit('copy can copy arrays', () => {
+  it('copy can copy arrays', () => {
     const example = [];
     const copiedExample = copy(example);
 
