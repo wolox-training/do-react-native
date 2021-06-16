@@ -1,10 +1,24 @@
+// eslint-disable-next-line no-undef
 module.exports = {
-  extends: 'airbnb-base',
-  env: { jest: true },
-  rules: {
-    'comma-dangle': ['error', 'never'],
-    'no-console': ['error', { allow: ['warn', 'error'] }],
-    'arrow-parens': ['off', { requireForBlockBody: false }],
-    'object-curly-newline': 'off'
-  }
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+    }
 };
