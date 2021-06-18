@@ -5,11 +5,15 @@ export function delay(time) {
     if (time > 500) {
       reject(new Error("This time is too much !"));
     } else {
-      resolve(time);
+      setTimeout(function () {
+        const max = time + 100;
+        const min = time - 100;
+        resolve(Math.floor(Math.random() * (max - min) + min));
+      }, time);
     }
   });
 }
 
 export async function asyncDelay(timeout) {
-  return await timeout;
+  return await delay(timeout);
 }
