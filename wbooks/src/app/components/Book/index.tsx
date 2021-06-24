@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, View, Image } from 'react-native';
 
+import styles from './styles';
+
 interface Props {
   book: Book;
 }
@@ -16,14 +18,15 @@ interface Book {
 
 function Book({ book }: Props) {
   return (
-    <View>
+    <View style={styles.container}>
       <Image
+        style={styles.imagen}
         source={book.imageUrl ? { uri: book.imageUrl } : require('@assets/img_book_placeholder.png')}
         resizeMode="contain"
       />
-      <View>
-        <Text>{book.title}</Text>
-        <Text>{book.author}</Text>
+      <View style={styles.containerText}>
+        <Text style={styles.title}>{book.title}</Text>
+        <Text style={styles.author}>{book.author}</Text>
       </View>
     </View>
   );
