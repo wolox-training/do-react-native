@@ -6,7 +6,6 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     borderRadius: 5,
-    height: 90,
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 1,
     shadowRadius: 1,
@@ -17,11 +16,12 @@ export default StyleSheet.create({
     paddingHorizontal: 30
   },
   imagen: {
-    height: 60
+    flex: 1,
+    marginVertical: 15
   },
   containerText: {
-    flexDirection: 'column',
-    marginLeft: 20
+    flex: 3,
+    marginLeft: 15
   },
   title: {
     fontSize: 17,
@@ -31,6 +31,6 @@ export default StyleSheet.create({
   author: {
     fontSize: 15,
     textAlign: 'left',
-    fontWeight: '600'
+    fontWeight: '500'
   }
 });
