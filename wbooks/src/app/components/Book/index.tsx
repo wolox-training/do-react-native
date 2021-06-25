@@ -31,3 +31,4 @@ function Book({ book }: Props) {
     </View>
   );
 }
+export default Book;
