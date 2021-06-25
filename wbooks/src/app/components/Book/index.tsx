@@ -4,9 +4,9 @@ import { Text, View, Image } from 'react-native';
 import styles from './styles';
 
 interface Props {
-  item: Book;
+  item: Item;
 }
-interface Book {
+interface Item {
   id: Number;
   author: String;
   title: String;
