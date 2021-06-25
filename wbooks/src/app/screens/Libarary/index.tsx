@@ -6,7 +6,11 @@ import { BOOKS_MOCK } from '@constants/mockBooks';
 function Library() {
   return (
     <SafeAreaView>
-      <FlatList data={BOOKS_MOCK} renderItem={Book} keyExtractor={item => item.id.toString()} />
+      <FlatList
+        data={BOOKS_MOCK}
+        renderItem={({ item }) => <Book book={item} />}
+        keyExtractor={item => item.id.toString()}
+      />
     </SafeAreaView>
   );
 }
