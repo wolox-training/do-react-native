@@ -1,4 +1,6 @@
-export const BOOKS_MOCK = [
+import { BookMock } from '@interfaces/index';
+
+export const BOOKS_MOCK: BookMock[] = [
   {
     id: 0,
     author: 'Emmie Thiel',

@@ -1,20 +1,12 @@
 import React from 'react';
 import { Text, View, Image } from 'react-native';
 import placeholder from '@assets/img_book_placeholder.png';
+import { BookMock } from '@interfaces/index';
 
 import styles from './styles';
 
 interface Props {
-  book: Book;
-}
-interface Book {
-  id: number;
-  author: string;
-  title: string;
-  genre: string;
-  publisher: string;
-  year: string;
-  imageUrl: string | null;
+  book: BookMock;
 }
 
 function Book({ book }: Props) {
@@ -24,7 +16,7 @@ function Book({ book }: Props) {
       <Image
         style={styles.imagen}
         source={imageUrl ? { uri: imageUrl as string } : placeholder}
-        resizeMode="contain"
+        resizeMode="stretch"
       />
       <View style={styles.containerText}>
         <Text style={styles.title}>{title}</Text>
