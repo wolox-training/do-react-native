@@ -1,15 +1,7 @@
-import { ImageStyle, StyleSheet, TextStyle, ViewStyle } from 'react-native';
+import { StyleSheet } from 'react-native';
 import color from '@constants/colors';
 
-interface Styles {
-  container: ViewStyle;
-  imagen: ImageStyle;
-  containerText: ViewStyle;
-  title: TextStyle;
-  author: TextStyle;
-}
-
-export default StyleSheet.create<Styles>({
+export default StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
