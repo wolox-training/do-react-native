@@ -23,7 +23,7 @@ function Book({ book }: Props) {
     <View style={styles.container}>
       <Image
         style={styles.imagen}
-        source={imageUrl ? { uri: imageUrl as string } : require(placeholder)}
+        source={imageUrl ? { uri: imageUrl as string } : placeholder}
         resizeMode="contain"
       />
       <View style={styles.containerText}>
