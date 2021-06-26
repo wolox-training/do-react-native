@@ -24,7 +24,7 @@ function Book({ book }: Props) {
       <Image
         style={styles.imagen}
         source={imageUrl ? { uri: imageUrl as string } : placeholder}
-        resizeMode="stretch"
+        resizeMode="contain"
       />
       <View style={styles.containerText}>
         <Text style={styles.title}>{title}</Text>
