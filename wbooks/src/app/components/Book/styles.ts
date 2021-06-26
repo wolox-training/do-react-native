@@ -27,12 +27,10 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 17,
-    textAlign: 'left',
     fontWeight: 'bold'
   },
   author: {
     fontSize: 15,
-    textAlign: 'left',
     fontWeight: '500',
     marginTop: 3
   }
