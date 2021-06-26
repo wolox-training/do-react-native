@@ -1,20 +1,12 @@
 import React from 'react';
 import { Text, View, Image } from 'react-native';
 import placeholder from '@assets/img_book_placeholder.png';
+import { Book as BookInterfaces } from '@interfaces/index';
 
 import styles from './styles';
 
 interface Props {
-  book: Book;
-}
-interface Book {
-  id: number;
-  author: string;
-  title: string;
-  genre: string;
-  publisher: string;
-  year: string;
-  imageUrl: string | null;
+  book: BookInterfaces;
 }
 
 function Book({ book }: Props) {
