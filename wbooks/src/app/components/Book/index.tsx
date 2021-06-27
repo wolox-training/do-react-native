@@ -11,6 +11,7 @@ interface Props {
 
 function Book({ book }: Props) {
   const { imageUrl, title, author } = book;
+  const titleWithoutSpaces = title.replace(/\s/, '');
   return (
     <View style={styles.container}>
       <Image
@@ -19,7 +20,7 @@ function Book({ book }: Props) {
         resizeMode="contain"
       />
       <View style={styles.containerText}>
-        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.title}>{titleWithoutSpaces.trim()}</Text>
         <Text style={styles.author}>{author}</Text>
       </View>
     </View>
