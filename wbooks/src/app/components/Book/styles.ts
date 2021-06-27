@@ -9,7 +9,7 @@ export default StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 1,
     shadowRadius: 1,
-    shadowColor: COLORS.shadow,
+    shadowColor: COLORS.codGray,
     backgroundColor: COLORS.white,
     marginHorizontal: 20,
     paddingVertical: 15,
@@ -27,11 +27,13 @@ export default StyleSheet.create({
   },
   title: {
     fontSize: 17,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: COLORS.tundora
   },
   author: {
     fontSize: 15,
     fontWeight: '500',
-    marginTop: 3
+    marginTop: 3,
+    color: COLORS.tundora
   }
 });
