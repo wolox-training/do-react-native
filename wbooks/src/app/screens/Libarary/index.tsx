@@ -1,8 +1,8 @@
 import React from 'react';
 import { FlatList, SafeAreaView, View } from 'react-native';
-import Book from '@components/Book';
 import { BOOKS_MOCK } from '@constants/mockBooks';
 
+import Book from './components/Book';
 import styles from './styles';
 
 function Library() {
