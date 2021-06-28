@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -9,21 +10,18 @@
  */
 
 import React from 'react';
-import Library from '@screens/Libarary';
-/* import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar } from 'react-native';
+import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar } from 'react-native';
 import {
   Header,
   LearnMoreLinks,
   Colors,
   DebugInstructions,
   ReloadInstructions
-} from 'react-native/Libraries/NewAppScreen';*/
+} from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
-  return <Library />;
-};
-
-/** <>
+  return (
+    <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.scrollView}>
@@ -56,8 +54,11 @@ const App = () => {
           </View>
         </ScrollView>
       </SafeAreaView>
-    </> */
-/* const styles = StyleSheet.create({
+    </>
+  );
+};
+
+const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter
   },
@@ -94,6 +95,6 @@ const App = () => {
     paddingRight: 12,
     textAlign: 'right'
   }
-});*/
+});
 
 export default App;
