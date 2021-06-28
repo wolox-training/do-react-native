@@ -9,7 +9,10 @@
  */
 
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Library from '@screens/Libarary';
+import BookDetail from '@screens/BookDetail';
 /* import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar } from 'react-native';
 import {
   Header,
@@ -18,9 +21,17 @@ import {
   DebugInstructions,
   ReloadInstructions
 } from 'react-native/Libraries/NewAppScreen';*/
+const Stack = createStackNavigator();
 
 const App = () => {
-  return <Library />;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName={'Library'} headerMode="screen">
+        <Stack.Screen name="Library" component={Library} options={{ headerShown: false }} />
+        <Stack.Screen name="BookDetail" component={BookDetail} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 };
 
 /** <>
