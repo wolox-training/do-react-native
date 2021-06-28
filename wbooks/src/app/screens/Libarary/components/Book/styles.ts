@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
 import COLORS from '@constants/colors';
-import SIZES from '@constants/sizes';
+
+const HEIGHT_IMAGE = 90;
+const WIDTH_IMAGE = 55;
 
 export default StyleSheet.create({
   container: {
@@ -13,17 +15,16 @@ export default StyleSheet.create({
     backgroundColor: COLORS.white,
     marginHorizontal: 20,
     paddingVertical: 15,
-    paddingHorizontal: 30,
+    paddingHorizontal: 20,
     elevation: 3
   },
-  imagen: {
-    flex: 1,
-    height: SIZES.imagenBookLibary.height,
-    width: SIZES.imagenBookLibary.width
+  image: {
+    height: HEIGHT_IMAGE,
+    width: WIDTH_IMAGE
   },
   containerText: {
-    flex: 3,
-    marginLeft: 15
+    marginLeft: 15,
+    flex: 1
   },
   title: {
     fontSize: 17,
