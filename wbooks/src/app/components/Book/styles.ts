@@ -23,7 +23,8 @@ export default StyleSheet.create({
     width: WIDTH_IMAGEN
   },
   containerText: {
-    marginLeft: 15
+    marginLeft: 15,
+    flex: 1
   },
   title: {
     fontSize: 17,
