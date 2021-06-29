@@ -5,7 +5,7 @@ import Library from '@screens/Library';
 import BookDetail from '@screens/BookDetail';
 
 const Stack = createStackNavigator();
-
+const TITLES = { bookDetail: 'BOOK DETAIL' };
 const AppNavigator = () => {
   return (
     <Stack.Navigator initialRouteName={Routes.libraryListRoute} headerMode="screen">
@@ -13,7 +13,7 @@ const AppNavigator = () => {
       <Stack.Screen
         name={Routes.bookDetailListRoute}
         component={BookDetail}
-        options={{ title: 'BOOK DETAIL' }}
+        options={{ title: TITLES.bookDetail }}
       />
     </Stack.Navigator>
   );
