@@ -1,8 +1,8 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Routes from '@constants/routes';
-import Library from '@app/screens/Libarary';
-import BookDetail from '@app/screens/BookDetail';
+import Library from '@screens/Library';
+import BookDetail from '@screens/BookDetail';
 
 const Stack = createStackNavigator();
 
