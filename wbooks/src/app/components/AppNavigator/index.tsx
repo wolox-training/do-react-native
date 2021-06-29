@@ -10,7 +10,11 @@ const AppNavigator = () => {
   return (
     <Stack.Navigator initialRouteName={Routes.libraryListRoute} headerMode="screen">
       <Stack.Screen name={Routes.libraryListRoute} component={Library} options={{ headerShown: false }} />
-      <Stack.Screen name={Routes.bookDetailListRoute} component={BookDetail} />
+      <Stack.Screen
+        name={Routes.bookDetailListRoute}
+        component={BookDetail}
+        options={{ title: 'BOOK DETAIL' }}
+      />
     </Stack.Navigator>
   );
 };
