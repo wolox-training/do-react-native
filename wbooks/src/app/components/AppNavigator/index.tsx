@@ -10,13 +10,14 @@ import styles from './styles';
 
 const Stack = createStackNavigator();
 const TITLES = { bookDetail: 'BOOK DETAIL' };
+const header = () => <Image source={headerBar} style={styles.headerBar} resizeMode="stretch" />;
 const AppNavigator = () => {
   return (
     <Stack.Navigator
       initialRouteName={Routes.libraryListRoute}
       headerMode="screen"
       screenOptions={{
-        headerBackground: () => <Image source={headerBar} style={styles.headerBar} resizeMode="stretch" />,
+        headerBackground: header,
         headerTitleStyle: styles.title
       }}>
       <Stack.Screen name={Routes.libraryListRoute} component={Library} />
