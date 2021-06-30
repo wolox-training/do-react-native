@@ -1,5 +1,6 @@
 export default {
   codGray: '#0D0D0D',
   white: '#FFFFFF',
-  tundora: '#4A4A4A'
+  tundora: '#4A4A4A',
+  polar: '#EAF6FA'
 };
