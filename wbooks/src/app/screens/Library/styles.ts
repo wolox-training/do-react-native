@@ -2,14 +2,11 @@ import { StyleSheet } from 'react-native';
 import COLORS from '@constants/colors';
 
 export default StyleSheet.create({
+  containerView: {
+    backgroundColor: COLORS.polar
+  },
   flatList: {
-    backgroundColor: COLORS.polar,
-    paddingTop: 20
-  },
-  separator: {
-    height: 10
-  },
-  footer: {
-    height: 30
+    paddingVertical: 20,
+    paddingTop: 17
   }
 });

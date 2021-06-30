@@ -1,21 +1,21 @@
 import React from 'react';
-import { FlatList, SafeAreaView, View } from 'react-native';
+import { FlatList, SafeAreaView } from 'react-native';
 import { BOOKS_MOCK } from '@constants/mockBooks';
+import { Book as BookInterface } from '@interfaces/book';
 
 import Book from './components/Book';
 import styles from './styles';
 
 function Library() {
+  const renderItem = ({ item }: { item: BookInterface }) => <Book book={item} />;
+  const keyExtractor = (item: BookInterface) => item.id.toString();
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.containerView}>
       <FlatList
         data={BOOKS_MOCK}
-        ItemSeparatorComponent={() => <View style={styles.separator} />}
-        renderItem={({ item }) => <Book book={item} />}
-        ListFooterComponent={() => <View />}
-        ListFooterComponentStyle={styles.footer}
-        keyExtractor={item => item.id.toString()}
-        style={styles.flatList}
+        renderItem={renderItem}
+        keyExtractor={keyExtractor}
+        contentContainerStyle={styles.flatList}
       />
     </SafeAreaView>
   );
