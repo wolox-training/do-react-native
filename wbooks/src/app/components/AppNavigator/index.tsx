@@ -4,21 +4,21 @@ import Routes from '@constants/routes';
 import Library from '@screens/Library';
 import BookDetail from '@screens/BookDetail';
 import { Image } from 'react-native';
+import COLORS from '@constants/colors';
 
 import headerBar from './assets/bc_nav_bar.png';
 import styles from './styles';
 
 const Stack = createStackNavigator();
 const TITLES = { bookDetail: 'BOOK DETAIL' };
-const header = () => <Image source={headerBar} style={styles.headerBar} resizeMode="stretch" />;
 const AppNavigator = () => {
   return (
     <Stack.Navigator
       initialRouteName={Routes.libraryListRoute}
       headerMode="screen"
       screenOptions={{
-        headerBackground: header,
-        headerTitleStyle: styles.title
+        headerBackground: () => <Image source={headerBar} style={styles.headerBar} resizeMode="stretch" />,
+        headerTintColor: COLORS.white
       }}>
       <Stack.Screen name={Routes.libraryListRoute} component={Library} />
       <Stack.Screen
