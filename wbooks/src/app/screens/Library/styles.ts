@@ -6,7 +6,6 @@ export default StyleSheet.create({
     backgroundColor: COLORS.polar
   },
   flatList: {
-    paddingVertical: 20,
     paddingTop: 17
   }
 });
