@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native';
 import COLORS from '@constants/colors';
 
-const HEIGHT_IMAGE = 90;
-const WIDTH_IMAGE = 55;
+const HEIGHT_IMAGE = 60;
+const WIDTH_IMAGE = 40;
 
 export default StyleSheet.create({
   container: {
@@ -16,7 +16,8 @@ export default StyleSheet.create({
     marginHorizontal: 20,
     paddingVertical: 15,
     paddingHorizontal: 20,
-    elevation: 3
+    elevation: 3,
+    marginBottom: 10
   },
   image: {
     height: HEIGHT_IMAGE,
