@@ -21,7 +21,8 @@ const AppNavigator = () => {
       headerMode="screen"
       screenOptions={{
         headerBackground: () => <Image source={headerImage} style={styles.headerBar} resizeMode="stretch" />,
-        headerTintColor: COLORS.white
+        headerTintColor: COLORS.white,
+        headerTitleAlign: 'center'
       }}>
       <Stack.Screen
         name={Routes.libraryListRoute}
