@@ -13,7 +13,6 @@ interface Props {
 function Book({ book }: Props) {
   const { imageUrl, title, author } = book;
   const navigation = useNavigation();
-  const titleWithoutSpaces = title.replace(/\s/, '');
   function handleOpenBookDetail() {
     navigation.navigate('BookDetail', { book });
   }
@@ -26,7 +25,7 @@ function Book({ book }: Props) {
           resizeMode="stretch"
         />
         <View style={styles.containerText}>
-          <Text style={styles.title}>{titleWithoutSpaces.trim()}</Text>
+          <Text style={styles.title}>{title.trim()}</Text>
           <Text style={styles.author}>{author}</Text>
         </View>
       </View>
