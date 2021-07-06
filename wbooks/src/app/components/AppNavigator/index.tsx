@@ -17,7 +17,7 @@ const TITLES = { bookDetail: 'BOOK DETAIL', library: 'LIBRARY' };
 const AppNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName={Routes.libraryListRoute}
+      initialRouteName={Routes.Library}
       headerMode="screen"
       screenOptions={{
         headerBackground: () => <Image source={headerImage} style={styles.headerBar} resizeMode="stretch" />,
@@ -25,7 +25,7 @@ const AppNavigator = () => {
         headerTitleAlign: 'center'
       }}>
       <Stack.Screen
-        name={Routes.libraryListRoute}
+        name={Routes.Library}
         component={Library}
         options={{
           title: TITLES.library,
@@ -34,7 +34,7 @@ const AppNavigator = () => {
         }}
       />
       <Stack.Screen
-        name={Routes.bookDetailListRoute}
+        name={Routes.BookDetail}
         component={BookDetail}
         options={({ navigation }) => ({
           title: TITLES.bookDetail,

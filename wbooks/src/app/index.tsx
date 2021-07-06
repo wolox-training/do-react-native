@@ -9,9 +9,9 @@
  */
 
 import React from 'react';
+import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import AppNavigator from '@components/AppNavigator';
-import { StatusBar } from 'react-native';
 import COLORS from '@constants/colors';
 
 const App = () => {
