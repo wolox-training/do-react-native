@@ -1,6 +1,6 @@
 const Routes = {
-  libraryListRoute: 'Library',
-  bookDetailListRoute: 'BookDetail'
+  Library: 'Library',
+  BookDetail: 'BookDetail'
 };
 
 export default Routes;

@@ -8,13 +8,9 @@ const Stack = createStackNavigator();
 const TITLES = { bookDetail: 'BOOK DETAIL' };
 const AppNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName={Routes.libraryListRoute} headerMode="screen">
-      <Stack.Screen name={Routes.libraryListRoute} component={Library} options={{ headerShown: false }} />
-      <Stack.Screen
-        name={Routes.bookDetailListRoute}
-        component={BookDetail}
-        options={{ title: TITLES.bookDetail }}
-      />
+    <Stack.Navigator initialRouteName={Routes.Library}>
+      <Stack.Screen name={Routes.Library} component={Library} options={{ headerShown: false }} />
+      <Stack.Screen name={Routes.BookDetail} component={BookDetail} options={{ title: TITLES.bookDetail }} />
     </Stack.Navigator>
   );
 };

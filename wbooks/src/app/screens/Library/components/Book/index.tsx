@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text, View, Image, TouchableNativeFeedback } from 'react-native';
-import placeholder from '@assets/img_book_placeholder.png';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import placeholder from '@assets/img_book_placeholder.png';
 import { Book as BookInterface } from '@interfaces/book';
+import Routes from '@constants/routes';
 
 import styles from './styles';
 
@@ -13,23 +14,17 @@ interface Props {
 function Book({ book }: Props) {
   const { imageUrl, title, author } = book;
   const navigation = useNavigation();
-  function handleOpenBookDetail() {
-    navigation.navigate('BookDetail', { book });
-  }
+  const handleOpenBookDetail = () => {
+    navigation.navigate(Routes.BookDetail, { book });
+  };
   return (
-    <TouchableNativeFeedback onPress={handleOpenBookDetail}>
-      <View style={styles.container}>
-        <Image
-          style={styles.image}
-          source={imageUrl ? { uri: imageUrl } : placeholder}
-          resizeMode="stretch"
-        />
-        <View style={styles.containerText}>
-          <Text style={styles.title}>{title.trim()}</Text>
-          <Text style={styles.author}>{author}</Text>
-        </View>
+    <TouchableOpacity onPress={handleOpenBookDetail} style={styles.container}>
+      <Image style={styles.image} source={imageUrl ? { uri: imageUrl } : placeholder} resizeMode="stretch" />
+      <View style={styles.containerText}>
+        <Text style={styles.title}>{title.trim()}</Text>
+        <Text style={styles.author}>{author}</Text>
       </View>
-    </TouchableNativeFeedback>
+    </TouchableOpacity>
   );
 }
 export default Book;
