@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Routes from '@constants/routes';
 import Library from '@screens/Library';
 import BookDetail from '@screens/BookDetail';
@@ -13,7 +14,9 @@ import headerSearch from './assets/ic_search.png';
 import styles from './styles';
 
 const Stack = createStackNavigator();
+// const Tab = createBottomTabNavigator();
 const TITLES = { BookDetail: 'BOOK DETAIL', Library: 'LIBRARY' };
+
 const AppNavigator = () => {
   return (
     <Stack.Navigator
