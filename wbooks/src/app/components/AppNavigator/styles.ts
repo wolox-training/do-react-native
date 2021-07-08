@@ -2,12 +2,18 @@ import { StyleSheet } from 'react-native';
 import COLORS from '@constants/colors';
 
 export default StyleSheet.create({
-  headerBar: {
+  headerImageBar: {
     width: '100%',
-    flex: 1,
-    backgroundColor: COLORS.polar
+    backgroundColor: COLORS.polar,
+    flex: 1
   },
   headerIcons: {
-    marginHorizontal: 13
-  }
+    marginHorizontal: 13,
+    marginBottom: 20
+  },
+  headerTitle: {
+    fontWeight: 'normal',
+    paddingBottom: 20
+  },
+  headerBar: { height: 115 }
 });
