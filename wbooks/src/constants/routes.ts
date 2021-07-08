@@ -1,4 +1,5 @@
 const Routes = {
+  MainTab: 'MainTab',
   Library: 'Library',
   BookDetail: 'BookDetail'
 };
