@@ -13,7 +13,8 @@ export default StyleSheet.create({
   },
   headerTitle: {
     fontWeight: 'normal',
-    paddingBottom: 20
+    paddingBottom: 20,
+    marginHorizontal: 13
   },
   headerBar: { height: 115 }
 });
