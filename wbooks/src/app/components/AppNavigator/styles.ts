@@ -5,16 +5,16 @@ export default StyleSheet.create({
   headerImageBar: {
     width: '100%',
     backgroundColor: COLORS.polar,
-    flex: 1
-  },
-  headerIcons: {
-    marginHorizontal: 13,
-    marginBottom: 20
+    height: '100%'
   },
   headerTitle: {
-    fontWeight: 'normal',
-    paddingBottom: 20,
-    marginHorizontal: 13
+    fontWeight: 'normal'
   },
-  headerBar: { height: 115 }
+  headerBar: {
+    height: 115
+  },
+  alignItemHeader: {
+    marginHorizontal: 13,
+    marginBottom: 20
+  }
 });
