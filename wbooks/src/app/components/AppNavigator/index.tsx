@@ -25,8 +25,11 @@ const TITLES = { BookDetail: 'BOOK DETAIL', Library: 'LIBRARY' };
           <Image source={headerImage} style={styles.headerImageBar} resizeMode="stretch" />
         ),
         headerTintColor: COLORS.white,
-        headerTitleStyle: styles.headerTitle,
-        headerStyle: styles.headerBar
+        headerTitleStyle: [styles.headerTitle, styles.alignItemHeader],
+        headerStyle: styles.headerBar,
+        headerBackTitleVisible: false,
+        headerBackImage: () => <Image source={headerBackImage} />,
+        headerLeftContainerStyle: styles.alignItemHeader
       }}>
       <Stack.Screen name={Routes.MainTab} component={Library} />
     </Stack.Navigator>
@@ -71,9 +74,7 @@ const AppNavigator = () => {
         name={Routes.BookDetail}
         component={BookDetail}
         options={{
-          title: TITLES.BookDetail,
-          headerBackTitleVisible: false,
-          headerBackImage: () => <Image source={headerBackImage} style={styles.headerIcons} />
+          title: TITLES.BookDetail
         }}
       />
     </Stack.Navigator>
