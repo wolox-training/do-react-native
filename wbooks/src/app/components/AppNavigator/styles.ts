@@ -8,7 +8,10 @@ export default StyleSheet.create({
     height: '100%'
   },
   headerTitle: {
-    fontWeight: 'normal'
+    fontWeight: 'normal',
+    fontSize: 17,
+    lineHeight: 20,
+    letterSpacing: -0.41
   },
   headerBar: {
     height: 115
