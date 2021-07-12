@@ -12,11 +12,12 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import AppNavigator from '@components/AppNavigator';
+import COLORS from '@constants/colors';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <StatusBar translucent />
+      <StatusBar backgroundColor={COLORS.cerulean} translucent barStyle="light-content" />
       <AppNavigator />
     </NavigationContainer>
   );
