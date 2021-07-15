@@ -8,17 +8,11 @@ import BookDetail from '@screens/BookDetail';
 import COLORS from '@constants/colors';
 
 import headerImage from './assets/bc_nav_bar.png';
-import headerBackImage from './assets/ic_back.png';
+// import headerBackImage from './assets/ic_back.png';
 import icLibraryActive from './assets/ToolBar/ic_library_active.png';
 import icLibrary from './assets/ToolBar/ic_library.png';
 import icWishlist from './assets/ToolBar/ic_wishlist.png';
 import icWishlistActive from './assets/ToolBar/ic_wishlist_active.png';
-import icAddNew from './assets/ToolBar/ic_add_new.png';
-import icAddNewActive from './assets/ToolBar/ic_add_new_active.png';
-import icMyrRentals from './assets/ToolBar/ic_myrentals.png';
-import icMyrRentalsActive from './assets/ToolBar/ic_myrentals_active.png';
-import icSettings from './assets/ToolBar/ic_settings.png';
-import icSettingsActive from './assets/ToolBar/ic_settings_active.png';
 import styles from './styles';
 
 const Stack = createStackNavigator();
@@ -35,7 +29,7 @@ const TITLES = {
   Settings: 'SETTINGS'
 };
 
-const StackLibrary = () => {
+const StackBook = () => {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -48,6 +42,13 @@ const StackLibrary = () => {
         title: TITLES.Library
       }}>
       <Stack.Screen name={Routes.Library} component={Library} />
+      <Stack.Screen
+        name={Routes.BookDetail}
+        component={BookDetail}
+        options={{
+          title: TITLES.BookDetail
+        }}
+      />
     </Stack.Navigator>
   );
 };
@@ -69,56 +70,7 @@ const StackWishList = () => {
   );
 };
 
-const StackAddNew = () => {
-  return (
-    <Stack.Navigator
-      screenOptions={{
-        headerBackground: () => (
-          <Image source={headerImage} style={styles.headerImageBar} resizeMode="stretch" />
-        ),
-        headerTintColor: COLORS.white,
-        headerTitleStyle: [styles.headerTitle, styles.alignItemHeader],
-        headerStyle: styles.headerBar,
-        title: TITLES.AddNew
-      }}>
-      <Stack.Screen name={Routes.AddNew} component={EmptyScreen} />
-    </Stack.Navigator>
-  );
-};
-const StackRentals = () => {
-  return (
-    <Stack.Navigator
-      screenOptions={{
-        headerBackground: () => (
-          <Image source={headerImage} style={styles.headerImageBar} resizeMode="stretch" />
-        ),
-        headerTintColor: COLORS.white,
-        headerTitleStyle: [styles.headerTitle, styles.alignItemHeader],
-        headerStyle: styles.headerBar,
-        title: TITLES.Rentals
-      }}>
-      <Stack.Screen name={Routes.Rentals} component={EmptyScreen} />
-    </Stack.Navigator>
-  );
-};
-const StackSetting = () => {
-  return (
-    <Stack.Navigator
-      screenOptions={{
-        headerBackground: () => (
-          <Image source={headerImage} style={styles.headerImageBar} resizeMode="stretch" />
-        ),
-        headerTintColor: COLORS.white,
-        headerTitleStyle: [styles.headerTitle, styles.alignItemHeader],
-        headerStyle: styles.headerBar,
-        title: TITLES.Settings
-      }}>
-      <Stack.Screen name={Routes.Settings} component={EmptyScreen} />
-    </Stack.Navigator>
-  );
-};
-
-const TapNavigator = () => {
+const AppNavigator = () => {
   return (
     <Tab.Navigator
       initialRouteName={Routes.Library}
@@ -127,7 +79,7 @@ const TapNavigator = () => {
       }}>
       <Tab.Screen
         name={Routes.Library}
-        component={StackLibrary}
+        component={StackBook}
         options={{
           tabBarLabel: Routes.Library,
           tabBarIcon: ({ focused }) => {
@@ -145,41 +97,11 @@ const TapNavigator = () => {
           }
         }}
       />
-      <Tab.Screen
-        name={Routes.AddNew}
-        component={StackAddNew}
-        options={{
-          tabBarLabel: Routes.AddNew,
-          tabBarIcon: ({ focused }) => {
-            return <Image source={focused ? icAddNewActive : icAddNew} />;
-          }
-        }}
-      />
-      <Tab.Screen
-        name={Routes.Rentals}
-        component={StackRentals}
-        options={{
-          tabBarLabel: Routes.Rentals,
-          tabBarIcon: ({ focused }) => {
-            return <Image source={focused ? icMyrRentalsActive : icMyrRentals} />;
-          }
-        }}
-      />
-      <Tab.Screen
-        name={Routes.Settings}
-        component={StackSetting}
-        options={{
-          tabBarLabel: Routes.Settings,
-          tabBarIcon: ({ focused }) => {
-            return <Image source={focused ? icSettingsActive : icSettings} />;
-          }
-        }}
-      />
     </Tab.Navigator>
   );
 };
 
-const AppNavigator = () => {
+/* const AppNavigator = () => {
   return (
     <Stack.Navigator
       initialRouteName={Routes.MainTab}
@@ -204,5 +126,5 @@ const AppNavigator = () => {
       />
     </Stack.Navigator>
   );
-};
+};*/
 export default AppNavigator;
