@@ -1,11 +1,11 @@
-const Routes = {
-  MainTab: 'MainTab',
+export const Routes = {
   Library: 'Library',
   BookDetail: 'BookDetail',
-  Wishlist: 'Wishlist',
-  AddNew: 'Add New',
-  Rentals: 'Rentals',
-  Settings: 'Settings'
+  Wishlist: 'Wishlist'
 };
 
-export default Routes;
+export const Titles = {
+  BookDetail: 'BOOK DETAIL',
+  Library: 'LIBRARY',
+  Wishlist: 'WISHLIST'
+};
