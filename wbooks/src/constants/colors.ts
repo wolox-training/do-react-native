@@ -3,5 +3,6 @@ export default {
   white: '#FFFFFF',
   tundora: '#4A4A4A',
   polar: '#EAF6FA',
-  cerulean: '#00ADEE'
+  cerulean: '#00ADEE',
+  dustyGray: '#9B9B9B'
 };
