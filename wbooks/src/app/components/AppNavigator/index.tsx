@@ -1,27 +1,22 @@
 import React from 'react';
-import { Image, SafeAreaView } from 'react-native';
+import { Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Routes, Titles } from '@constants/routes';
 import Library from '@screens/Library';
 import BookDetail from '@screens/BookDetail';
+import Empty from '@screens/Empty';
 import COLORS from '@constants/colors';
 
 import headerImage from './assets/bc_nav_bar.png';
 import headerBackImage from './assets/ic_back.png';
-import icLibraryActive from './assets/ToolBar/ic_library_active.png';
-import icLibrary from './assets/ToolBar/ic_library.png';
-import icWishlist from './assets/ToolBar/ic_wishlist.png';
-import icWishlistActive from './assets/ToolBar/ic_wishlist_active.png';
 import styles from './styles';
+import TabBarIcons from './components/TabBarIcons';
 
 const Stack = createStackNavigator();
-const tabBarIcon = createBottomTabNavigator();
-const EmptyScreen = () => {
-  return <SafeAreaView />;
-};
+const TabNavigator = createBottomTabNavigator();
 
-const StackNavigator = () => {
+const LibraryStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -32,7 +27,7 @@ const StackNavigator = () => {
         headerTitleStyle: [styles.headerTitle, styles.alignItemHeader],
         headerStyle: styles.headerBar,
         headerBackTitleVisible: false,
-        headerBackImage: () => <Image source={headerBackImage} />,
+        headerBackImage: () => <Image source={headerBackImage} resizeMode="contain" />,
         headerLeftContainerStyle: styles.alignItemHeader
       }}>
       <Stack.Screen
@@ -55,31 +50,19 @@ const StackNavigator = () => {
 
 const AppNavigator = () => {
   return (
-    <tabBarIcon.Navigator
+    <TabNavigator.Navigator
       initialRouteName={Routes.Library}
       screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused }) => {
-          let iconName = null;
-          switch (route.name) {
-            case Routes.Library:
-              iconName = focused ? icLibraryActive : icLibrary;
-              break;
-            case Routes.Wishlist:
-              iconName = focused ? icWishlistActive : icWishlist;
-              break;
-            default:
-              return null;
-          }
-          return <Image source={iconName} />;
-        }
+        tabBarIcon: ({ focused }) => <TabBarIcons route={route.name} focused={focused} />
       })}
       tabBarOptions={{
         activeTintColor: COLORS.cerulean,
-        inactiveTintColor: COLORS.dustyGray
+        inactiveTintColor: COLORS.dustyGray,
+        labelStyle: styles.tabLabel
       }}>
-      <tabBarIcon.Screen name={Routes.Library} component={StackNavigator} />
-      <tabBarIcon.Screen name={Routes.Wishlist} component={EmptyScreen} />
-    </tabBarIcon.Navigator>
+      <TabNavigator.Screen name={Routes.Library} component={LibraryStack} />
+      <TabNavigator.Screen name={Routes.Wishlist} component={Empty} />
+    </TabNavigator.Navigator>
   );
 };
 
