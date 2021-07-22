@@ -19,5 +19,11 @@ export default StyleSheet.create({
   alignItemHeader: {
     marginHorizontal: 13,
     marginBottom: 20
+  },
+  tabLabel: {
+    fontWeight: 'normal',
+    fontSize: 10,
+    lineHeight: 11.78,
+    letterSpacing: 0.12
   }
 });
