@@ -11,7 +11,7 @@ import COLORS from '@constants/colors';
 import headerImage from './assets/bc_nav_bar.png';
 import headerBackImage from './assets/ic_back.png';
 import styles from './styles';
-import TabBarIcons from './components/TabBarIcons';
+import TabBarIcon from './components/TabBarIcon';
 
 const Stack = createStackNavigator();
 const TabNavigator = createBottomTabNavigator();
@@ -53,7 +53,7 @@ const AppNavigator = () => {
     <TabNavigator.Navigator
       initialRouteName={Routes.Library}
       screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused }) => <TabBarIcons route={route.name} focused={focused} />
+        tabBarIcon: ({ focused }) => <TabBarIcon route={route.name} focused={focused} />
       })}
       tabBarOptions={{
         activeTintColor: COLORS.cerulean,
