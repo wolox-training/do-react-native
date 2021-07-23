@@ -1,6 +1,11 @@
-const Routes = {
+export const Routes = {
   Library: 'Library',
-  BookDetail: 'BookDetail'
+  BookDetail: 'BookDetail',
+  Wishlist: 'Wishlist'
 };
 
-export default Routes;
+export const Titles = {
+  BookDetail: 'BOOK DETAIL',
+  Library: 'LIBRARY',
+  Wishlist: 'WISHLIST'
+};

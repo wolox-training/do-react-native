@@ -1,21 +1,24 @@
 import React from 'react';
 import { Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Routes from '@constants/routes';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Routes, Titles } from '@constants/routes';
 import Library from '@screens/Library';
 import BookDetail from '@screens/BookDetail';
+import Empty from '@screens/Empty';
 import COLORS from '@constants/colors';
 
 import headerImage from './assets/bc_nav_bar.png';
 import headerBackImage from './assets/ic_back.png';
 import styles from './styles';
+import TabBarIcon from './components/TabBarIcon';
 
 const Stack = createStackNavigator();
-const TITLES = { BookDetail: 'BOOK DETAIL', Library: 'LIBRARY' };
-const AppNavigator = () => {
+const TabNavigator = createBottomTabNavigator();
+
+const LibraryStack = () => {
   return (
     <Stack.Navigator
-      initialRouteName={Routes.Library}
       screenOptions={{
         headerBackground: () => (
           <Image source={headerImage} style={styles.headerImageBar} resizeMode="stretch" />
@@ -24,24 +27,43 @@ const AppNavigator = () => {
         headerTitleStyle: [styles.headerTitle, styles.alignItemHeader],
         headerStyle: styles.headerBar,
         headerBackTitleVisible: false,
-        headerBackImage: () => <Image source={headerBackImage} />,
+        headerBackImage: () => <Image source={headerBackImage} resizeMode="contain" />,
         headerLeftContainerStyle: styles.alignItemHeader
       }}>
       <Stack.Screen
         name={Routes.Library}
         component={Library}
         options={{
-          title: TITLES.Library
+          title: Titles.Library
         }}
       />
       <Stack.Screen
         name={Routes.BookDetail}
         component={BookDetail}
         options={{
-          title: TITLES.BookDetail
+          title: Titles.BookDetail
         }}
       />
     </Stack.Navigator>
   );
 };
+
+const AppNavigator = () => {
+  return (
+    <TabNavigator.Navigator
+      initialRouteName={Routes.Library}
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused }) => <TabBarIcon route={route.name} focused={focused} />
+      })}
+      tabBarOptions={{
+        activeTintColor: COLORS.cerulean,
+        inactiveTintColor: COLORS.dustyGray,
+        labelStyle: styles.tabLabel
+      }}>
+      <TabNavigator.Screen name={Routes.Library} component={LibraryStack} />
+      <TabNavigator.Screen name={Routes.Wishlist} component={Empty} />
+    </TabNavigator.Navigator>
+  );
+};
+
 export default AppNavigator;
