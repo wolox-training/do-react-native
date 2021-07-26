@@ -2,17 +2,17 @@ import React from 'react';
 import { Image } from 'react-native';
 import { Routes } from '@constants/routes';
 
-import icLibraryActive from '../../assets/ToolBar/ic_library_active.png';
-import icLibrary from '../../assets/ToolBar/ic_library.png';
-import icWishlist from '../../assets/ToolBar/ic_wishlist.png';
-import icWishlistActive from '../../assets/ToolBar/ic_wishlist_active.png';
+import icLibraryActive from './assets/ic_library_active.png';
+import icLibrary from './assets/ic_library.png';
+import icWishlist from './assets/ic_wishlist.png';
+import icWishlistActive from './assets/ic_wishlist_active.png';
 
 interface Props {
   route: string;
   focused: boolean;
 }
 
-function TabBarIcons({ route, focused }: Props) {
+function TabBarIcon({ route, focused }: Props) {
   let iconName = null;
   switch (route) {
     case Routes.Library:
@@ -26,4 +26,4 @@ function TabBarIcons({ route, focused }: Props) {
   }
   return <Image source={iconName} resizeMode="contain" />;
 }
-export default TabBarIcons;
+export default TabBarIcon;
