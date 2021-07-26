@@ -13,7 +13,7 @@ interface GetBooks {
 }
 type Action = GetBooks;
 
-const reducer = (state: State = initialState, action: Action) => {
+const book = (state: State = initialState, action: Action) => {
   switch (action.type) {
     case ActionsType.GET_BOOKS:
       return { ...state, book: action.payload };
@@ -22,4 +22,4 @@ const reducer = (state: State = initialState, action: Action) => {
   }
 };
 
-export default reducer;
+export default book;

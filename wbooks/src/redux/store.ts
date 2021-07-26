@@ -1,6 +1,8 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import Reactotron from 'reactotron-react-native';
 
-import reducer from './book/reducer';
+import book from './book/reducer';
 
-export const store = createStore(reducer, Reactotron.createEnhancer!());
+const rootReducer = combineReducers({ book });
+
+export const store = createStore(rootReducer, Reactotron.createEnhancer!());

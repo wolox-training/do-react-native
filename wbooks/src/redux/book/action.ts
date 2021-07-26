@@ -1,13 +1,13 @@
-import { Book } from '@interfaces/book';
+import { BOOKS_MOCK } from '@constants/mockBooks';
 
 export enum ActionsType {
   GET_BOOKS = 'GET_BOOKS'
 }
 
-const ActionCreators = {
-  getBooks: (newBooks: Book[]) => {
-    return { type: ActionsType.GET_BOOKS, payload: newBooks };
+const actionCreators = {
+  getBooks: () => {
+    return { type: ActionsType.GET_BOOKS, payload: BOOKS_MOCK };
   }
 };
 
-export default ActionCreators;
+export default actionCreators;
