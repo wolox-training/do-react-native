@@ -9,3 +9,4 @@ if (__DEV__) {
     .use(reactotronRedux())
     .connect();
 }
+export default Reactotron;
