@@ -12,7 +12,7 @@ import App from './src/app';
 
 const middlewares = [];
 const mockStore = configureStore(middlewares);
-const initialState = {};
+const initialState = { books: [] };
 const store = mockStore(initialState);
 // Note: test renderer must be required after react-native.
 it('renders correctly', () => {
