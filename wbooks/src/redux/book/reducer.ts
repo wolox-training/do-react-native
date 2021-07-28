@@ -4,8 +4,10 @@ import { ActionsType } from './action';
 
 interface State {
   books: Book[];
+  isLoading: boolean;
+  errorMessage: string;
 }
-const initialState = { books: [] };
+const initialState = { books: [], isLoading: false, errorMessage: '' };
 
 interface GetBooks {
   type: ActionsType.GET_BOOKS;
@@ -22,8 +24,12 @@ type Action = GetBooks | GetBooksSuccess | GetBooksFailure;
 
 const book = (state: State = initialState, action: Action) => {
   switch (action.type) {
+    case ActionsType.GET_BOOKS:
+      return { ...state, isLoaing: true };
     case ActionsType.GET_BOOKS_SUCCESS:
       return { ...state, books: action.payload };
+    case ActionsType.GET_BOOKS_FAILURE:
+      return { ...state, errorMessage: action.payload };
     default:
       return state;
   }
