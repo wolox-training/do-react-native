@@ -7,7 +7,7 @@ interface State {
   isLoading: boolean;
   errorMessage: string;
 }
-const initialState = { books: [], isLoading: false, errorMessage: '' };
+export const initialState = { books: [], isLoading: false, errorMessage: '' };
 
 interface GetBooks {
   type: ActionsType.GET_BOOKS;
