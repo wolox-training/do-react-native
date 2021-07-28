@@ -10,10 +10,10 @@ import styles from './styles';
 
 function Library() {
   const dispatch = useDispatch();
+  const books = useSelector<State, BookInterface[]>(state => state.book.books);
   useEffect(() => {
     dispatch(bookAction.getBooks());
   }, [dispatch]);
-  const books = useSelector<State, BookInterface[]>(state => state.book.books);
   const renderItem: ListRenderItem<BookInterface> = ({ item }) => <Book book={item} />;
   const keyExtractor = (item: BookInterface) => item.id.toString();
   return (
