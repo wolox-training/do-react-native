@@ -25,11 +25,11 @@ type Action = GetBooks | GetBooksSuccess | GetBooksFailure;
 const book = (state: State = initialState, action: Action) => {
   switch (action.type) {
     case ActionsType.GET_BOOKS:
-      return { ...state, isLoaing: true };
+      return { ...state, isLoading: true };
     case ActionsType.GET_BOOKS_SUCCESS:
-      return { ...state, books: action.payload };
+      return { ...state, books: action.payload, isLoading: false };
     case ActionsType.GET_BOOKS_FAILURE:
-      return { ...state, errorMessage: action.payload };
+      return { ...state, errorMessage: action.payload, isLoading: false };
     default:
       return state;
   }
