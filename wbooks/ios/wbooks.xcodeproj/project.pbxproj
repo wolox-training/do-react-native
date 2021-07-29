@@ -45,6 +45,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* wbooksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wbooksTests.m; sourceTree = "<group>"; };
 		096B0C616C588CFCE1C2D864 /* Pods-wbooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wbooks.debug.xcconfig"; path = "Target Support Files/Pods-wbooks/Pods-wbooks.debug.xcconfig"; sourceTree = "<group>"; };
+		0BEA58F126B31E8100C2F16E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		0C90A444C91E1F8D024492EF /* Pods-wbooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wbooks.release.xcconfig"; path = "Target Support Files/Pods-wbooks/Pods-wbooks.release.xcconfig"; sourceTree = "<group>"; };
 		0DAFB389CAECDE115E523F33 /* Pods-wbooks-wbooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wbooks-wbooksTests.debug.xcconfig"; path = "Target Support Files/Pods-wbooks-wbooksTests/Pods-wbooks-wbooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0E994091E5DE40EC84AFCD39 /* Pods-wbooks-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wbooks-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-wbooks-tvOS/Pods-wbooks-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				0BEA58F126B31E8100C2F16E /* Config.xcconfig */,
 				13B07FAE1A68108700A75B9A /* wbooks */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* wbooksTests */,
@@ -194,7 +196,6 @@
 				0DAFB389CAECDE115E523F33 /* Pods-wbooks-wbooksTests.debug.xcconfig */,
 				F74DE5961DE3364580D1F2BD /* Pods-wbooks-wbooksTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -843,6 +844,7 @@
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BEA58F126B31E8100C2F16E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -903,6 +905,7 @@
 		};
 		83CBBA211A601CBA00E9B192 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BEA58F126B31E8100C2F16E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
