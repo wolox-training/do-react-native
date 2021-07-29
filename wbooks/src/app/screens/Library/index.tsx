@@ -4,18 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Book as BookInterface } from '@interfaces/book';
 import { State } from '@interfaces/state';
 import BookAction from '@redux/book/action';
-import Config from 'react-native-config';
-import Reactotron from '@config/reactotronConfig';
 
 import Book from './components/Book';
 import styles from './styles';
 
 function Library() {
-  const secretVariable = Config.SECRET_VARIABLE;
-  Reactotron.display({
-    name: 'SECRET_VARIABLE',
-    value: secretVariable
-  });
   const dispatch = useDispatch();
   const books = useSelector<State, BookInterface[]>(state => state.book.books);
   useEffect(() => {

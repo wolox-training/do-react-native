@@ -4,7 +4,6 @@
 
 import 'react-native';
 import React from 'react';
-import '@config/reactotronConfig';
 import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
