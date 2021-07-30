@@ -1,5 +1,5 @@
-import BookService from '@services/BookService';
 import { Dispatch } from 'redux';
+import BookService from '@services/BookService';
 
 export enum ActionsType {
   GET_BOOKS = 'GET_BOOKS',
