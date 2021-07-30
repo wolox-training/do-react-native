@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { BOOKS_MOCK } from '@constants/mockBooks';
+import BookService from '@services/BookService';
 
 export enum ActionsType {
   GET_BOOKS = 'GET_BOOKS',
@@ -8,9 +8,9 @@ export enum ActionsType {
 }
 
 const actionCreators = {
-  getBooks: () => (dispatch: Dispatch) => {
+  getBooks: () => async (dispatch: Dispatch) => {
     dispatch({ type: ActionsType.GET_BOOKS });
-    const response = { ok: true, data: BOOKS_MOCK, problem: 'Fail' };
+    const response = await BookService.getBooks();
     if (response.ok) {
       dispatch({ type: ActionsType.GET_BOOKS_SUCCESS, payload: response.data });
     } else {
