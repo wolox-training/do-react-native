@@ -1,7 +1,11 @@
-import api from '@config/api';
+import { BOOKS_MOCK } from '@constants/mockBooks';
+import { ResponseBooks } from '@interfaces/bookService';
 
-const services = {
-  getService: () => api.get('/service')
+const BookService = {
+  getBooks: () =>
+    new Promise<ResponseBooks>(resolve => {
+      resolve({ ok: true, data: BOOKS_MOCK, problem: 'Fail' });
+    })
 };
 
-export default services;
+export default BookService;
