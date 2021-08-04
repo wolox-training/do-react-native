@@ -1,15 +1,9 @@
 import { createReducer, completeReducer, completeState } from 'redux-recompose';
-import { Book } from '@interfaces/book';
+import { BookState } from '@interfaces/book';
 
 import { actions } from './action';
 
-interface State {
-  books: Book[];
-  booksLoading: boolean;
-  booksError: string | null;
-}
-
-export const initialState: State = completeState({
+export const initialState: BookState = completeState({
   description: {
     books: []
   }
