@@ -1,3 +1,5 @@
-import { rootReducer } from '@redux/store';
+import { BookState } from './book';
 
-export type State = ReturnType<typeof rootReducer>;
+export type State = {
+  book: BookState;
+};
