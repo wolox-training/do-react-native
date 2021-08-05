@@ -13,7 +13,7 @@ import headerImage from './assets/bc_nav_bar.png';
 import headerBackImage from './assets/ic_back.png';
 import styles from './styles';
 import TabBarIcon from './components/TabBarIcon';
-import HeaderSearch from './components/HeaderSearch';
+import HeaderSearchButton from './components/HeaderSearchButton';
 
 const Stack = createStackNavigator();
 const TabNavigator = createBottomTabNavigator();
@@ -37,7 +37,7 @@ const LibraryStack = () => {
         component={Library}
         options={{
           title: Titles.Library,
-          headerRight: HeaderSearch,
+          headerRight: HeaderSearchButton,
           headerRightContainerStyle: styles.alignItemHeader
         }}
       />
@@ -52,7 +52,7 @@ const LibraryStack = () => {
         name={Routes.Search}
         component={Search}
         options={{
-          title: Titles.BookDetail
+          title: 'Search'
         }}
       />
     </Stack.Navigator>
