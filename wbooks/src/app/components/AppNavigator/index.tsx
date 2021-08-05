@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Routes, Titles } from '@constants/routes';
 import Library from '@screens/Library';
 import BookDetail from '@screens/BookDetail';
+import Search from '@screens/Search';
 import Empty from '@screens/Empty';
 import COLORS from '@constants/colors';
 
@@ -12,6 +13,7 @@ import headerImage from './assets/bc_nav_bar.png';
 import headerBackImage from './assets/ic_back.png';
 import styles from './styles';
 import TabBarIcon from './components/TabBarIcon';
+import HeaderSearch from './components/HeaderSearch';
 
 const Stack = createStackNavigator();
 const TabNavigator = createBottomTabNavigator();
@@ -34,12 +36,21 @@ const LibraryStack = () => {
         name={Routes.Library}
         component={Library}
         options={{
-          title: Titles.Library
+          title: Titles.Library,
+          headerRight: HeaderSearch,
+          headerRightContainerStyle: styles.alignItemHeader
         }}
       />
       <Stack.Screen
         name={Routes.BookDetail}
         component={BookDetail}
+        options={{
+          title: Titles.BookDetail
+        }}
+      />
+      <Stack.Screen
+        name={Routes.Search}
+        component={Search}
         options={{
           title: Titles.BookDetail
         }}
