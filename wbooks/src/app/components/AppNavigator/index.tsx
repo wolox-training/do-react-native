@@ -5,7 +5,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Routes, Titles } from '@constants/routes';
 import Library from '@screens/Library';
 import BookDetail from '@screens/BookDetail';
-import Search from '@screens/Search';
 import Empty from '@screens/Empty';
 import COLORS from '@constants/colors';
 
@@ -50,7 +49,7 @@ const LibraryStack = () => {
       />
       <Stack.Screen
         name={Routes.Search}
-        component={Search}
+        component={Library}
         options={{
           title: 'Search'
         }}

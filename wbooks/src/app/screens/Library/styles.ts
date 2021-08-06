@@ -3,7 +3,8 @@ import COLORS from '@constants/colors';
 
 export default StyleSheet.create({
   containerView: {
-    backgroundColor: COLORS.polar
+    backgroundColor: COLORS.polar,
+    flex: 1
   },
   flatList: {
     paddingTop: 17

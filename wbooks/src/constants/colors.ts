@@ -4,5 +4,6 @@ export default {
   tundora: '#4A4A4A',
   polar: '#EAF6FA',
   cerulean: '#00ADEE',
-  dustyGray: '#9B9B9B'
+  dustyGray: '#9B9B9B',
+  black: '#030303'
 };
