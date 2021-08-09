@@ -6,7 +6,8 @@ export default StyleSheet.create({
     backgroundColor: COLORS.white,
     flexDirection: 'row',
     borderRadius: 100,
-    height: 28
+    height: 28,
+    marginBottom: 31
   },
   image: {
     width: 13,

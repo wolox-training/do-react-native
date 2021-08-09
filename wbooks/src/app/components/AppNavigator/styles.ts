@@ -28,6 +28,5 @@ export default StyleSheet.create({
   },
   filterInput: {
     flex: 1
-    // height: '100%'
   }
 });

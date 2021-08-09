@@ -5,5 +5,6 @@ export default {
   polar: '#EAF6FA',
   cerulean: '#00ADEE',
   dustyGray: '#9B9B9B',
-  black: '#030303'
+  black: '#030303',
+  monza: '#D0021B'
 };

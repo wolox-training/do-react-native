@@ -54,7 +54,8 @@ const LibraryStack = () => {
         component={Search}
         options={{
           headerTitle: FilterInput,
-          headerTitleContainerStyle: styles.filterInput
+          headerTitleContainerStyle: styles.filterInput,
+          headerLeft: () => null
         }}
       />
     </Stack.Navigator>
