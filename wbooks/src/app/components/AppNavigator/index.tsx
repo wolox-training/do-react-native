@@ -7,12 +7,14 @@ import Library from '@screens/Library';
 import BookDetail from '@screens/BookDetail';
 import Empty from '@screens/Empty';
 import COLORS from '@constants/colors';
+import Search from '@app/screens/Search';
 
 import headerImage from './assets/bc_nav_bar.png';
 import headerBackImage from './assets/ic_back.png';
 import styles from './styles';
 import TabBarIcon from './components/TabBarIcon';
 import HeaderSearchButton from './components/HeaderSearchButton';
+import FilterInput from './components/FilterInput';
 
 const Stack = createStackNavigator();
 const TabNavigator = createBottomTabNavigator();
@@ -49,9 +51,10 @@ const LibraryStack = () => {
       />
       <Stack.Screen
         name={Routes.Search}
-        component={Library}
+        component={Search}
         options={{
-          title: 'Search'
+          headerTitle: FilterInput,
+          headerTitleContainerStyle: styles.filterInput
         }}
       />
     </Stack.Navigator>

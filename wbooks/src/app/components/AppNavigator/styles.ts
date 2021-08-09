@@ -25,5 +25,8 @@ export default StyleSheet.create({
     fontSize: 10,
     lineHeight: 11.78,
     letterSpacing: 0.12
+  },
+  filterInput: {
+    flex: 1
   }
 });
