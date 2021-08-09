@@ -1,7 +1,7 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import ListBooks from '@app/components/ListBooks';
 
 function Search() {
-  return <SafeAreaView />;
+  return <ListBooks books={[]} />;
 }
 export default Search;

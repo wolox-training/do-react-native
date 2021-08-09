@@ -5,10 +5,14 @@ export default StyleSheet.create({
   container: {
     backgroundColor: COLORS.white,
     flexDirection: 'row',
-    borderRadius: 40
+    borderRadius: 100,
+    height: 28
   },
-  imagen: {
-    height: 15,
-    width: 15
-  }
+  image: {
+    width: 13,
+    height: 12,
+    marginVertical: 8,
+    marginLeft: 8
+  },
+  input: { flex: 1 }
 });
