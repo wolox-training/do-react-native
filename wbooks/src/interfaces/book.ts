@@ -12,5 +12,5 @@ export interface BookState {
   books: Book[];
   booksLoading: boolean;
   booksError: string | null;
-  filterSearch: string | null;
+  filterSearch: string;
 }

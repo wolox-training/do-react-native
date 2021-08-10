@@ -7,9 +7,10 @@ import styles from './styles';
 
 interface Props {
   books: BookInterface[];
+  emptyListComponent?: JSX.Element | null;
 }
 
-function ListBooks({ books }: Props) {
+function ListBooks({ books, emptyListComponent }: Props) {
   const renderItem: ListRenderItem<BookInterface> = ({ item }) => <Book book={item} />;
   const keyExtractor = (item: BookInterface) => item.id.toString();
   return (
@@ -19,6 +20,7 @@ function ListBooks({ books }: Props) {
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         contentContainerStyle={styles.flatList}
+        ListEmptyComponent={emptyListComponent}
       />
     </SafeAreaView>
   );

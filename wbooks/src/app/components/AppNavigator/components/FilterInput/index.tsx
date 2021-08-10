@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { View, Image, TextInput, TouchableOpacity } from 'react-native';
 import BookAction from '@redux/book/action';
+import icSearchPlaceholder from '@assets/ic_search_placeholder.png';
 
 import styles from './styles';
-import icSearchPlaceholder from './assets/ic_search_placeholder.png';
 
 function FilterInput() {
   const dispatch = useDispatch();

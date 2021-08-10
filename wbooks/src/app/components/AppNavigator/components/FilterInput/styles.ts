@@ -13,9 +13,13 @@ export default StyleSheet.create({
     width: 13,
     height: 12,
     marginVertical: 8,
-    marginLeft: 8
+    marginLeft: 8,
+    marginRight: 13
   },
-  input: { flex: 1 },
+  input: {
+    flex: 1,
+    marginVertical: 6
+  },
   clearTouch: {
     right: 8,
     height: '100%'
