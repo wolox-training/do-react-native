@@ -9,11 +9,21 @@ export default StyleSheet.create({
     height: 28,
     marginBottom: 31
   },
-  image: {
+  imageSearch: {
     width: 13,
     height: 12,
     marginVertical: 8,
     marginLeft: 8
   },
-  input: { flex: 1 }
+  input: { flex: 1 },
+  clearTouch: {
+    right: 8,
+    height: '100%'
+  },
+  imageClear: {
+    width: 13,
+    height: 12,
+    backgroundColor: COLORS.iron
+  },
+  activeClearButtn: { backgroundColor: COLORS.monza }
 });

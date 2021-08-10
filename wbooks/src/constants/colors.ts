@@ -6,5 +6,6 @@ export default {
   cerulean: '#00ADEE',
   dustyGray: '#9B9B9B',
   black: '#030303',
-  monza: '#D0021B'
+  monza: '#D0021B',
+  iron: '#CFD0D2'
 };
