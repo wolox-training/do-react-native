@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import placeholder from '@assets/img_book_placeholder.png';
 import { Book as BookInterface } from '@interfaces/book';
 import { Routes } from '@constants/routes';
 
+import placeholder from './assets/img_book_placeholder.png';
 import styles from './styles';
 
 interface Props {
