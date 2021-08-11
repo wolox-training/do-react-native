@@ -5,6 +5,7 @@ import BookAction from '@redux/book/action';
 import icSearch from '@assets/ic_search.png';
 
 import styles from './styles';
+import icClear from './assets/close.png';
 
 function FilterInput() {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ function FilterInput() {
       <TextInput value={bookFilter} onChangeText={text => setBookFilter(text)} style={styles.input} />
       <TouchableOpacity onPress={handleClearFilter} disabled={disabledClearButton}>
         <Image
-          source={icSearch}
+          source={icClear}
           style={[styles.imageClear, !disabledClearButton && styles.activeClearButtn]}
         />
       </TouchableOpacity>
