@@ -8,13 +8,14 @@ import styles from './styles';
 interface Props {
   books: BookInterface[];
   emptyListComponent?: JSX.Element | null;
+  backgroundColorWhite?: boolean | null;
 }
 
-function ListBooks({ books, emptyListComponent }: Props) {
+function ListBooks({ books, emptyListComponent, backgroundColorWhite }: Props) {
   const renderItem: ListRenderItem<BookInterface> = ({ item }) => <Book book={item} />;
   const keyExtractor = (item: BookInterface) => item.id.toString();
   return (
-    <SafeAreaView style={styles.containerView}>
+    <SafeAreaView style={[styles.containerView, backgroundColorWhite && styles.backgroundColorWhite]}>
       <FlatList
         data={books}
         renderItem={renderItem}

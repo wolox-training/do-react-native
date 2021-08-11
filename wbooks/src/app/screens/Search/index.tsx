@@ -12,6 +12,13 @@ function Search() {
   const booksFilter = books.filter((book: BookInterface) => {
     return book.title.toLowerCase().includes(filterSearch.toLowerCase());
   });
-  return <ListBooks books={filterSearch === '' ? [] : booksFilter} emptyListComponent={<EmptyFilter />} />;
+  const filterEmpty = filterSearch === '';
+  return (
+    <ListBooks
+      books={filterEmpty ? [] : booksFilter}
+      emptyListComponent={<EmptyFilter />}
+      backgroundColorWhite={filterEmpty}
+    />
+  );
 }
 export default Search;

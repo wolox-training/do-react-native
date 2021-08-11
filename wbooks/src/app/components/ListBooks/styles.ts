@@ -7,6 +7,10 @@ export default StyleSheet.create({
     flex: 1
   },
   flatList: {
-    paddingTop: 17
+    paddingTop: 17,
+    flexGrow: 1
+  },
+  backgroundColorWhite: {
+    backgroundColor: COLORS.white
   }
 });

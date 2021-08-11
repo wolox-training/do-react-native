@@ -3,7 +3,8 @@ import COLORS from '@constants/colors';
 
 export default StyleSheet.create({
   container: {
-    justifyContent: 'center'
+    alignItems: 'center',
+    marginTop: 88
   },
   image: {
     width: 50,
