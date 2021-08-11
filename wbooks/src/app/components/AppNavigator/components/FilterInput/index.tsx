@@ -5,7 +5,7 @@ import BookAction from '@redux/book/action';
 import icSearch from '@assets/ic_search.png';
 
 import styles from './styles';
-import icClear from './assets/close.png';
+import icClear from './assets/cancel.png';
 
 function FilterInput() {
   const dispatch = useDispatch();
