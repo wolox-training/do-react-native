@@ -9,7 +9,8 @@ export default StyleSheet.create({
   image: {
     width: 50,
     height: 50,
-    marginBottom: 20
+    marginBottom: 20,
+    tintColor: COLORS.tundora
   },
   title: {
     fontSize: 15,

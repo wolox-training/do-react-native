@@ -14,20 +14,19 @@ export default StyleSheet.create({
     height: 12,
     marginVertical: 8,
     marginLeft: 8,
-    marginRight: 13
+    marginRight: 13,
+    tintColor: COLORS.manatee
   },
   input: {
     flex: 1,
     marginVertical: 6
   },
-  clearTouch: {
-    right: 8,
-    height: '100%'
-  },
   imageClear: {
-    width: 13,
-    height: 12,
-    backgroundColor: COLORS.iron
+    tintColor: COLORS.iron,
+    width: 14,
+    height: 14,
+    right: 8,
+    marginVertical: 8
   },
-  activeClearButtn: { backgroundColor: COLORS.monza }
+  activeClearButtn: { tintColor: COLORS.monza }
 });

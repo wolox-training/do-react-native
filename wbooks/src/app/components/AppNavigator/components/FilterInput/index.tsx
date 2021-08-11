@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { View, Image, TextInput, TouchableOpacity } from 'react-native';
 import BookAction from '@redux/book/action';
-import icSearchPlaceholder from '@assets/ic_search_placeholder.png';
+import icSearch from '@assets/ic_search.png';
 
 import styles from './styles';
 
@@ -18,12 +18,11 @@ function FilterInput() {
   const disabledClearButton = bookFilter === '';
   return (
     <View style={styles.container}>
-      <Image source={icSearchPlaceholder} style={styles.imageSearch} />
+      <Image source={icSearch} style={styles.imageSearch} />
       <TextInput value={bookFilter} onChangeText={text => setBookFilter(text)} style={styles.input} />
-      <TouchableOpacity onPress={handleClearFilter} disabled={disabledClearButton} style={styles.clearTouch}>
+      <TouchableOpacity onPress={handleClearFilter} disabled={disabledClearButton}>
         <Image
-          source={icSearchPlaceholder}
-          resizeMode="contain"
+          source={icSearch}
           style={[styles.imageClear, !disabledClearButton && styles.activeClearButtn]}
         />
       </TouchableOpacity>

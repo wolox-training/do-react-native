@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import icSearchPlaceholder from '@assets/ic_search_placeholder.png';
 
 import styles from './styles';
+import icSearchPlaceholder from './assets/ic_search_placeholder.png';
 
 function EmptyFilter() {
   return (

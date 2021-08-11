@@ -7,5 +7,6 @@ export default {
   dustyGray: '#9B9B9B',
   black: '#030303',
   monza: '#D0021B',
-  iron: '#CFD0D2'
+  iron: '#CFD0D2',
+  manatee: '#8E8E93'
 };
