@@ -19,7 +19,11 @@ export default StyleSheet.create({
   },
   input: {
     flex: 1,
-    marginVertical: 6
+    paddingVertical: 6,
+    fontSize: 14,
+    fontWeight: 'normal',
+    lineHeight: 16,
+    letterSpacing: -0.15
   },
   imageClear: {
     tintColor: COLORS.iron,
