@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import COLORS from '@constants/colors';
+import SIZES from '@constants/sizes';
 
 const HEIGHT_IMAGE = 60;
 const WIDTH_IMAGE = 40;
@@ -28,12 +29,12 @@ export default StyleSheet.create({
     flex: 1
   },
   title: {
-    fontSize: 17,
+    fontSize: SIZES.titleText,
     fontWeight: 'bold',
     color: COLORS.tundora
   },
   author: {
-    fontSize: 15,
+    fontSize: SIZES.regularText,
     fontWeight: '500',
     marginTop: 3,
     color: COLORS.tundora

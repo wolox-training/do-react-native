@@ -7,7 +7,7 @@ import Library from '@screens/Library';
 import BookDetail from '@screens/BookDetail';
 import Empty from '@screens/Empty';
 import COLORS from '@constants/colors';
-import Search from '@app/screens/Search';
+import Search from '@screens/Search';
 
 import headerImage from './assets/bc_nav_bar.png';
 import headerBackImage from './assets/ic_back.png';
@@ -54,8 +54,7 @@ const LibraryStack = () => {
         component={Search}
         options={{
           headerTitle: FilterInput,
-          headerTitleContainerStyle: styles.filterInput,
-          headerLeft: () => null
+          headerTitleContainerStyle: styles.filterInput
         }}
       />
     </Stack.Navigator>

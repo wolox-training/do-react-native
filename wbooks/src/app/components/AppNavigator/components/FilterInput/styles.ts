@@ -1,17 +1,20 @@
 import { StyleSheet } from 'react-native';
 import COLORS from '@constants/colors';
 
+const SIZE_SEARCH = 12;
+const SIZE_CLEAR = 14;
+
 export default StyleSheet.create({
   container: {
     backgroundColor: COLORS.white,
     flexDirection: 'row',
     borderRadius: 100,
     height: 28,
-    marginBottom: 31
+    marginBottom: 20
   },
   imageSearch: {
-    width: 13,
-    height: 12,
+    width: SIZE_SEARCH,
+    height: SIZE_SEARCH,
     marginVertical: 8,
     marginLeft: 8,
     marginRight: 13,
@@ -27,8 +30,8 @@ export default StyleSheet.create({
   },
   imageClear: {
     tintColor: COLORS.iron,
-    width: 14,
-    height: 14,
+    width: SIZE_CLEAR,
+    height: SIZE_CLEAR,
     right: 8,
     marginVertical: 8
   },
