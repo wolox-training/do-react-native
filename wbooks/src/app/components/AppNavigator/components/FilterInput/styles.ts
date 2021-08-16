@@ -10,19 +10,18 @@ export default StyleSheet.create({
     flexDirection: 'row',
     borderRadius: 100,
     height: 28,
-    marginBottom: 20
+    marginBottom: 20,
+    padding: 8
   },
   imageSearch: {
     width: SIZE_SEARCH,
     height: SIZE_SEARCH,
-    marginVertical: 8,
-    marginLeft: 8,
     marginRight: 13,
     tintColor: COLORS.manatee
   },
   input: {
     flex: 1,
-    paddingVertical: 6,
+    marginVertical: -12,
     fontSize: 14,
     fontWeight: 'normal',
     lineHeight: 16,
@@ -31,9 +30,7 @@ export default StyleSheet.create({
   imageClear: {
     tintColor: COLORS.iron,
     width: SIZE_CLEAR,
-    height: SIZE_CLEAR,
-    right: 8,
-    marginVertical: 8
+    height: SIZE_CLEAR
   },
   activeClearButtn: { tintColor: COLORS.monza }
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, Platform } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Routes, Titles } from '@constants/routes';
@@ -54,7 +54,10 @@ const LibraryStack = () => {
         component={Search}
         options={{
           headerTitle: FilterInput,
-          headerTitleContainerStyle: styles.filterInput
+          headerTitleContainerStyle: [
+            styles.filterInput,
+            Platform.OS === 'android' && styles.filterImputAndorid
+          ]
         }}
       />
     </Stack.Navigator>

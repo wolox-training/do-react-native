@@ -29,5 +29,8 @@ export default StyleSheet.create({
   },
   filterInput: {
     flex: 1
+  },
+  filterImputAndorid: {
+    marginLeft: -22
   }
 });
