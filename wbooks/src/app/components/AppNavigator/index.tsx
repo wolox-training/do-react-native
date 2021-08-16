@@ -56,7 +56,7 @@ const LibraryStack = () => {
           headerTitle: FilterInput,
           headerTitleContainerStyle: [
             styles.filterInput,
-            Platform.OS === 'android' && styles.filterImputAndorid
+            Platform.OS === 'android' && styles.filterImputAndroid
           ]
         }}
       />

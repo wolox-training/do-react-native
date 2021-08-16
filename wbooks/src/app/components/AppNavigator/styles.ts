@@ -30,7 +30,7 @@ export default StyleSheet.create({
   filterInput: {
     flex: 1
   },
-  filterImputAndorid: {
+  filterImputAndroid: {
     marginLeft: -22
   }
 });
