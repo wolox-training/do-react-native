@@ -1,25 +1,27 @@
 import { StyleSheet } from 'react-native';
 import COLORS from '@constants/colors';
 
+const SIZE_SEARCH = 12;
+const SIZE_CLEAR = 14;
+
 export default StyleSheet.create({
   container: {
     backgroundColor: COLORS.white,
     flexDirection: 'row',
     borderRadius: 100,
     height: 28,
-    marginBottom: 31
+    marginBottom: 20,
+    padding: 8
   },
   imageSearch: {
-    width: 13,
-    height: 12,
-    marginVertical: 8,
-    marginLeft: 8,
+    width: SIZE_SEARCH,
+    height: SIZE_SEARCH,
     marginRight: 13,
     tintColor: COLORS.manatee
   },
   input: {
     flex: 1,
-    paddingVertical: 6,
+    marginVertical: -12,
     fontSize: 14,
     fontWeight: 'normal',
     lineHeight: 16,
@@ -27,10 +29,8 @@ export default StyleSheet.create({
   },
   imageClear: {
     tintColor: COLORS.iron,
-    width: 14,
-    height: 14,
-    right: 8,
-    marginVertical: 8
+    width: SIZE_CLEAR,
+    height: SIZE_CLEAR
   },
   activeClearButtn: { tintColor: COLORS.monza }
 });

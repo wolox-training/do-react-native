@@ -1,5 +1,9 @@
 import { StyleSheet } from 'react-native';
 import COLORS from '@constants/colors';
+import SIZES from '@constants/sizes';
+
+const SIZE_50 = 50;
+const LINE_HEIGHT = 17.67;
 
 export default StyleSheet.create({
   container: {
@@ -7,24 +11,24 @@ export default StyleSheet.create({
     marginTop: 88
   },
   image: {
-    width: 50,
-    height: 50,
+    width: SIZE_50,
+    height: SIZE_50,
     marginBottom: 20,
     tintColor: COLORS.tundora
   },
   title: {
-    fontSize: 15,
+    fontSize: SIZES.regularText,
     fontWeight: 'bold',
     color: COLORS.black,
-    lineHeight: 17.67,
+    lineHeight: LINE_HEIGHT,
     letterSpacing: -0.36,
     marginBottom: 12
   },
   subTitle: {
-    fontSize: 15,
+    fontSize: SIZES.regularText,
     fontWeight: 'normal',
     color: COLORS.tundora,
-    lineHeight: 17.67,
+    lineHeight: LINE_HEIGHT,
     letterSpacing: -0.24
   }
 });
