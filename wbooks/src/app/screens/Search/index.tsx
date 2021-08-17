@@ -13,9 +13,9 @@ function Search() {
   const books = useSelector<State, BookInterface[]>(state => state.book.books);
   const booksFilter = useMemo(
     () =>
-      books.filter((book: BookInterface) => {
-        return book.title.toLowerCase().includes(filterSearch.toLowerCase());
-      }),
+      filterSearch
+        ? books.filter(book => book.title.toLowerCase().includes(filterSearch.toLowerCase()))
+        : books,
     [filterSearch, books]
   );
   const searchEmpty = filterSearch === '';
