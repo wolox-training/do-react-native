@@ -16,10 +16,10 @@ describe('get initial latter', () => {
 });
 
 describe('keep only number', () => {
-  it('get 2021 ', () => {
+  it('get 2021 in string ', () => {
     expect(keepNumbers('wolox2021')).toEqual('2021');
   });
-  it('get 2021 ', () => {
+  it('get 2021 in string in 2 words', () => {
     expect(keepNumbers('wolox 2021')).toEqual('2021');
   });
   it('get 192021 ', () => {
