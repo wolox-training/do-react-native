@@ -1,4 +1,4 @@
 export default {
-  regularText: 15,
-  titleText: 17
+  REGULAR: 15,
+  TITLE: 17
 };

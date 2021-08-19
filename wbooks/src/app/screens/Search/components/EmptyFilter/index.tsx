@@ -7,15 +7,15 @@ import icSearchPlaceholder from './assets/ic_search_placeholder.png';
 interface Props {
   empty: boolean;
 }
+const INITIAL_SUBTITLE = 'Find your favorite writers and books!';
+const INITIAL_TITLE = 'Search in Wbooks';
+const DO_NOT_FOUND = 'Search Do Not Found';
 function EmptyFilter({ empty }: Props) {
-  const initialSubtitle = 'Find your favorite writers and books!';
-  const initialTitle = 'Search in Wbooks';
-  const doNotFound = 'Search Do Not Found';
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={icSearchPlaceholder} resizeMode="contain" />
-      <Text style={styles.title}>{empty ? doNotFound : initialTitle}</Text>
-      <Text style={styles.subTitle}>{empty ? '' : initialSubtitle}</Text>
+      <Text style={styles.title}>{empty ? DO_NOT_FOUND : INITIAL_TITLE}</Text>
+      <Text style={styles.subTitle}>{empty ? '' : INITIAL_SUBTITLE}</Text>
     </View>
   );
 }

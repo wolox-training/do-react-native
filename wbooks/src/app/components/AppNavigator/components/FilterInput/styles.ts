@@ -21,7 +21,8 @@ export default StyleSheet.create({
   },
   input: {
     flex: 1,
-    marginVertical: -12,
+    height: 40,
+    bottom: 12,
     fontSize: 14,
     fontWeight: 'normal',
     lineHeight: 16,

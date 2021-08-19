@@ -10,7 +10,7 @@ export default StyleSheet.create({
   },
   headerTitle: {
     fontWeight: 'normal',
-    fontSize: SIZES.titleText,
+    fontSize: SIZES.TITLE,
     lineHeight: 20,
     letterSpacing: -0.41
   },
@@ -31,6 +31,6 @@ export default StyleSheet.create({
     flex: 1
   },
   filterImputAndroid: {
-    marginLeft: -22
+    left: 50
   }
 });
