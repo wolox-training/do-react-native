@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import COLORS from '@constants/colors';
+import SIZES from '@constants/sizes';
 
 export default StyleSheet.create({
   headerImageBar: {
@@ -9,7 +10,7 @@ export default StyleSheet.create({
   },
   headerTitle: {
     fontWeight: 'normal',
-    fontSize: 17,
+    fontSize: SIZES.TITLE,
     lineHeight: 20,
     letterSpacing: -0.41
   },
@@ -25,5 +26,11 @@ export default StyleSheet.create({
     fontSize: 10,
     lineHeight: 11.78,
     letterSpacing: 0.12
+  },
+  filterInput: {
+    flex: 1
+  },
+  filterImputAndroid: {
+    left: 50
   }
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, Platform } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Routes, Titles } from '@constants/routes';
@@ -7,11 +7,14 @@ import Library from '@screens/Library';
 import BookDetail from '@screens/BookDetail';
 import Empty from '@screens/Empty';
 import COLORS from '@constants/colors';
+import Search from '@screens/Search';
 
 import headerImage from './assets/bc_nav_bar.png';
 import headerBackImage from './assets/ic_back.png';
 import styles from './styles';
 import TabBarIcon from './components/TabBarIcon';
+import HeaderSearchButton from './components/HeaderSearchButton';
+import FilterInput from './components/FilterInput';
 
 const Stack = createStackNavigator();
 const TabNavigator = createBottomTabNavigator();
@@ -34,7 +37,9 @@ const LibraryStack = () => {
         name={Routes.Library}
         component={Library}
         options={{
-          title: Titles.Library
+          title: Titles.Library,
+          headerRight: HeaderSearchButton,
+          headerRightContainerStyle: styles.alignItemHeader
         }}
       />
       <Stack.Screen
@@ -42,6 +47,17 @@ const LibraryStack = () => {
         component={BookDetail}
         options={{
           title: Titles.BookDetail
+        }}
+      />
+      <Stack.Screen
+        name={Routes.Search}
+        component={Search}
+        options={{
+          headerTitle: FilterInput,
+          headerTitleContainerStyle: [
+            styles.filterInput,
+            Platform.OS === 'android' && styles.filterImputAndroid
+          ]
         }}
       />
     </Stack.Navigator>
