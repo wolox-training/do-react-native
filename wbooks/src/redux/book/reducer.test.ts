@@ -12,12 +12,12 @@ const testActions = {
     type: actions.GET_BOOKS_SUCCESS,
     target: 'books',
     payload: BOOKS_MOCK
-  }
-  /* getBooksFailure: {
+  },
+  getBooksFailure: {
     type: actions.GET_BOOKS_FAILURE,
     target: 'books',
-    payload: BOOKS_MOCK
-  }*/
+    payload: 'Not Found 404'
+  }
 };
 
 describe('@@BOOKS/GET_BOOKS', () => {
@@ -32,6 +32,13 @@ describe('@@BOOKS/GET_BOOKS', () => {
     expect(booksReducer(undefined, testActions.getBooksSuccess)).toMatchObject({
       books: BOOKS_MOCK,
       booksError: null,
+      booksLoading: false
+    });
+  });
+  test('GET_BOOKS_FAILURE', () => {
+    expect(booksReducer(undefined, testActions.getBooksFailure)).toMatchObject({
+      books: [],
+      booksError: 'Not Found 404',
       booksLoading: false
     });
   });
