@@ -1,7 +1,8 @@
 export const Routes = {
   Library: 'Library',
   BookDetail: 'BookDetail',
-  Wishlist: 'Wishlist'
+  Wishlist: 'Wishlist',
+  Search: 'Search'
 };
 
 export const Titles = {
