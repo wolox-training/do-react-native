@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { SafeAreaView } from 'react-native';
 import { useSelector } from 'react-redux';
 import { State } from '@interfaces/state';
@@ -11,9 +11,13 @@ import styles from './styles';
 function Search() {
   const filterSearch = useSelector<State, string>(state => state.book.filterSearch);
   const books = useSelector<State, BookInterface[]>(state => state.book.books);
-  const booksFilter = books.filter((book: BookInterface) => {
-    return book.title.toLowerCase().includes(filterSearch.toLowerCase());
-  });
+  const booksFilter = useMemo(
+    () =>
+      filterSearch
+        ? books.filter(book => book.title.toLowerCase().includes(filterSearch.toLowerCase()))
+        : books,
+    [filterSearch, books]
+  );
   const searchEmpty = filterSearch === '';
   const filterEmpty = booksFilter.length === 0;
   return (
