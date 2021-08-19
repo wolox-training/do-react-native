@@ -17,7 +17,7 @@ export default StyleSheet.create({
     tintColor: COLORS.tundora
   },
   title: {
-    fontSize: SIZES.regularText,
+    fontSize: SIZES.REGULAR,
     fontWeight: 'bold',
     color: COLORS.black,
     lineHeight: LINE_HEIGHT,
@@ -25,7 +25,7 @@ export default StyleSheet.create({
     marginBottom: 12
   },
   subTitle: {
-    fontSize: SIZES.regularText,
+    fontSize: SIZES.REGULAR,
     fontWeight: 'normal',
     color: COLORS.tundora,
     lineHeight: LINE_HEIGHT,
