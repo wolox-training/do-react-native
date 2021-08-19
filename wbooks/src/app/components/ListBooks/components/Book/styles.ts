@@ -29,12 +29,12 @@ export default StyleSheet.create({
     flex: 1
   },
   title: {
-    fontSize: SIZES.titleText,
+    fontSize: SIZES.TITLE,
     fontWeight: 'bold',
     color: COLORS.tundora
   },
   author: {
-    fontSize: SIZES.regularText,
+    fontSize: SIZES.REGULAR,
     fontWeight: '500',
     marginTop: 3,
     color: COLORS.tundora

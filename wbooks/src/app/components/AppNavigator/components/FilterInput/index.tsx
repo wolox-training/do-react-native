@@ -11,13 +11,13 @@ import icClear from './assets/cancel.png';
 function FilterInput() {
   const dispatch = useDispatch();
   const filterSearch = useSelector<State, string>(state => state.book.filterSearch);
-  const handleOnChangesText = (text: string) => dispatch(BookAction.filterBooks(text));
+  const handleChangesText = (text: string) => dispatch(BookAction.filterBooks(text));
   const handleClearFilter = () => dispatch(BookAction.filterBooks(''));
   const disabledClearButton = filterSearch === '';
   return (
     <View style={styles.container}>
       <Image source={icSearch} style={styles.imageSearch} resizeMode="contain" />
-      <TextInput value={filterSearch} onChangeText={handleOnChangesText} style={styles.input} />
+      <TextInput value={filterSearch} onChangeText={handleChangesText} style={styles.input} />
       <TouchableOpacity onPress={handleClearFilter} disabled={disabledClearButton}>
         <Image
           source={icClear}
