@@ -1,24 +1,30 @@
 import { BOOKS_MOCK } from '@constants/mockBooks';
 
-import { actions } from './action';
+import { actions, target } from './action';
 import booksReducer from './reducer';
 
 const ERROR = 'Not Found 404';
+const FILTER_BOOK = 'Locked';
 
 const testActions = {
   getBooks: {
     type: actions.GET_BOOKS,
-    target: 'books'
+    target: target.BOOKS
   },
   getBooksSuccess: {
     type: actions.GET_BOOKS_SUCCESS,
-    target: 'books',
+    target: target.BOOKS,
     payload: BOOKS_MOCK
   },
   getBooksFailure: {
     type: actions.GET_BOOKS_FAILURE,
-    target: 'books',
+    target: target.BOOKS,
     payload: ERROR
+  },
+  filterBook: {
+    type: actions.FILTER_SEARCH,
+    target: target.FILTER_SEARCH,
+    payload: FILTER_BOOK
   }
 };
 
@@ -42,6 +48,11 @@ describe('@@BOOKS/GET_BOOKS', () => {
       books: [],
       booksError: ERROR,
       booksLoading: false
+    });
+  });
+  it('Filter book', () => {
+    expect(booksReducer(undefined, testActions.filterBook)).toMatchObject({
+      filterSearch: FILTER_BOOK
     });
   });
 });

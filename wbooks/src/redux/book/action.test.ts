@@ -1,17 +1,17 @@
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { BOOKS_MOCK } from '@constants/mockBooks';
+import { fetchMiddleware } from 'redux-recompose';
 
 import Actions, { actions, target } from './action';
+import { initialState } from './reducer';
 
-const middlewares = [thunk];
+const middlewares = [thunk, fetchMiddleware];
 const mockStore = configureStore(middlewares);
-const initialState = { book: { books: [], filterSearch: '' } };
 const mockedStore = mockStore(initialState);
-// beforeEach(() => mockedStore.clearActions());
-describe('actions filterBooks', () => {
-  mockedStore.dispatch(Actions.filterBooks('action'));
-  test('get filter', () => {
+beforeEach(() => mockedStore.clearActions());
+describe('Actions Books', () => {
+  it('Filter Book', () => {
+    mockedStore.dispatch(Actions.filterBooks('action'));
     expect(mockedStore.getActions()).toEqual([
       {
         target: target.FILTER_SEARCH,
@@ -20,17 +20,8 @@ describe('actions filterBooks', () => {
       }
     ]);
   });
-  beforeEach(() => mockedStore.clearActions());
-});
-
-/* describe('actions get books', () => {
-  beforeEach(() => mockedStore.clearActions());
-  mockedStore.dispatch(Actions.getBooks());
-  // api.get = jest.fn().mockImplementation(() => ({ ok: false, problem }));
-  test('success', () => {
-    expect(mockedStore.getActions()).toEqual([
-      { target: 'books', type: actions.BOOK_ACTION },
-      { target: 'books', type: actions.BOOK_ACTION_SUCCESS, payload: BOOKS_MOCK }
-    ]);
+  it('Get Book', () => {
+    mockedStore.dispatch(Actions.getBooks());
+    expect(mockedStore.getActions()).toEqual([{ target: target.BOOKS, type: actions.GET_BOOKS }]);
   });
-});*/
+});
