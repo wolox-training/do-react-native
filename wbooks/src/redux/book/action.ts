@@ -7,15 +7,20 @@ const completedActions = completeTypes({
 });
 export const actions = createTypes(completedActions, '@@BOOK');
 
+export const target = {
+  BOOKS: 'books',
+  FILTER_SEARCH: 'filterSearch'
+};
+
 const actionCreators = {
   getBooks: () => ({
     type: actions.GET_BOOKS,
-    target: 'books',
+    target: target.BOOKS,
     service: BookService.getBooks
   }),
   filterBooks: (filterText: string) => ({
     type: actions.FILTER_SEARCH,
-    target: 'filterSearch',
+    target: target.FILTER_SEARCH,
     payload: filterText
   })
 };
