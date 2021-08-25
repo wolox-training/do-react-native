@@ -18,7 +18,7 @@ function Book({ book }: Props) {
     navigation.navigate(Routes.BookDetail, { book });
   };
   return (
-    <TouchableOpacity onPress={handleOpenBookDetail} style={styles.container}>
+    <TouchableOpacity onPress={handleOpenBookDetail} style={styles.container} accessibilityRole="button">
       <Image style={styles.image} source={imageUrl ? { uri: imageUrl } : placeholder} resizeMode="stretch" />
       <View style={styles.containerText}>
         <Text style={styles.title}>{title.trim()}</Text>
