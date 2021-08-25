@@ -24,7 +24,7 @@ jest.mock('@react-navigation/native', () => {
   };
 });
 describe('Testing Library', () => {
-  test('have flatlist and frist item', () => {
+  test('have flatlist and length is equal to BOOKS_MOCK', () => {
     const { getByA11yLabel, getAllByA11yRole } = render(
       <Provider store={store}>
         <Library />
