@@ -12,17 +12,7 @@ const middlewares = [thunk, fetchMiddleware];
 const mockStore = configureStore(middlewares);
 const initialState = { book: { books: BOOKS_MOCK } };
 const store = mockStore(initialState);
-const mockedNavigate = jest.fn();
 
-jest.mock('@react-navigation/native', () => {
-  return {
-    // @ts-ignore
-    ...jest.requireActual('@react-navigation/native'),
-    useNavigation: () => ({
-      navigate: mockedNavigate
-    })
-  };
-});
 describe('Testing Library', () => {
   test('have flatlist and length is equal to BOOKS_MOCK', () => {
     const { getByA11yLabel, getAllByA11yRole } = render(
