@@ -20,6 +20,7 @@ function ListBooks({ books, emptyListComponent }: Props) {
       keyExtractor={keyExtractor}
       contentContainerStyle={styles.flatList}
       ListEmptyComponent={emptyListComponent}
+      accessibilityLabel="book list"
     />
   );
 }
